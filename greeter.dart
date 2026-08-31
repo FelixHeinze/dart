@@ -3,6 +3,9 @@ import 'dart:io';
 String? vorname;
 String? nachname;
 int? alter;
+String? anrede;
+DateTime jetzt = DateTime.now();
+int aktuelleStunde = jetzt.hour;
 void main() {
   // schleife für vorname und alter
   while (vorname == null) {
@@ -25,5 +28,35 @@ void main() {
       alter = pruefAlter;
     } else
       ('Bitte erneut das Alter eingeben.Passt nicht');
+  }
+
+  while (anrede == null) {
+    print(
+        ' Bitte wähle wähle entsprechend deines Geschlechtes: 1=männlich 2=weiblich');
+    stdout.write('Deine Auswahl: ');
+    String? auswahl = stdin.readLineSync();
+
+    switch (auswahl) {
+      case "1":
+        anrede = "Herr";
+        break;
+      case "2":
+        anrede = "Frau";
+        break;
+      default:
+        print('Ungültige eingabe. nochmal');
+    }
+  }
+  // basteln des ausgabestrings entsprechend den vorgaben in der aufgabenstellugn
+  if (alter! < 40) {
+    print('Hallo, $vorname');
+  } else {
+    if (aktuelleStunde < 12) {
+      print('Guten Morgen  $anrede $nachname');
+    } else if (aktuelleStunde < 18) {
+      print('Guten Tag $anrede $nachname');
+    } else {
+      print('Guten Abend $anrede $nachname');
+    }
   }
 }
