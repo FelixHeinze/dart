@@ -19,7 +19,6 @@ void main() {
     } else {
       List<int> wurfListe = [];
       int letzteWurf = 0;
-      bool zweiSechserInFolge = false;
 
       for (int i = 0; i < wurfAnzahl!; i++) {
         int wurf =
@@ -28,7 +27,6 @@ void main() {
         print('Wurf ${i + 1}: $wurf');
 
         if (letzteWurf == 6 && wurf == 6) {
-          zweiSechserInFolge = true;
           print('Zwei Sechser hintereinander! ');
           break;
         }
