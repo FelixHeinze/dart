@@ -25,6 +25,16 @@ bool istPrimzahl(int zahl) {
     }
   }
   return true; // Zahl ist eine Primzahl
+
+  /* Wenn eine Zahl einen Teiler hat, liegt mindestens einer der Teiler unterhalb der Quadratwurzel.
+
+Beispiel:
+
+45 = 5 × 9
+
+5 liegt unter √45
+
+9 liegt darüber  ---> nie über quadratwurzel hinaus prüfen */
 }
 
 void main() {
