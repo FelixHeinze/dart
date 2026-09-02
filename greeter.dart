@@ -8,7 +8,7 @@ DateTime jetzt = DateTime.now();
 int aktuelleStunde = jetzt.hour;
 void main() {
   // schleife für vorname und alter
-  while (vorname == null) {
+  while (vorname == null ) {
     stdout.write('Bitte gib deinen Vornamen ein: ');
     vorname = stdin.readLineSync();
   }
@@ -18,7 +18,7 @@ void main() {
   }
 
   //schleife mit abfrage für alter
-  while (alter == null) {
+  while (alter == null ) {
     stdout.write('Bitte gib dein Alter ein: ');
     String? alterEingabe = stdin.readLineSync();
     int? pruefAlter = int.tryParse(
