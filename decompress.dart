@@ -1,5 +1,5 @@
 
-
+import 'dart:io';
 String decompress(String input) {
   String result = '';
   int i = 0;
@@ -22,8 +22,10 @@ String decompress(String input) {
 }
 
 void main () {
-  String test = 'A3B7CCD5A4';
-  String decompressed = decompress(test);
-  print('Original: $test');
+
+  print('Bitte geben Sie eine komprimierte Zeichenkette ein, die dekomprimiert werden soll:');
+  String input = stdin.readLineSync() ?? '';
+  String decompressed = decompress(input);
+  print('Original: $input');
   print('Decomprimiert: $decompressed');
 }
