@@ -1,0 +1,7 @@
+name: dart
+
+dev_dependencies: 
+  test: ^1.25.0
+
+environment:
+  sdk: ^3.13.0
