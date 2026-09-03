@@ -19,4 +19,9 @@ void main(){
     String expectedOutput = 'ABCDE';
     expect(encode(input), equals(expectedOutput));
   });
+  test('Test 4: Komprimierung von AAA%%%44444', () {
+    String input = 'AAA%%%44444';
+    String expectedOutput = 'A3%3' + '4' + '5';
+    expect(encode(input), equals(expectedOutput));
+  });
 }
